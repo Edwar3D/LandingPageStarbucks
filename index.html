@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div  class="circle">
+        </div>
+        <header>
+            <a href="#">
+                <img class="logo" src="/images/logo.png" alt="logo">
+            </a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="/menu">Menú</a></li>
+                <li><a href="/news">Noticias</a></li>
+                <li><a href="/contact">Contacto</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>No sólo es un café <br><span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum vel quas consequatur deserunt. Vel, assumenda voluptatum ea ullam sunt inventore earum corporis corrupti, debitis suscipit, consequuntur in! Voluptas, voluptatibus neque?</p>
+                <a href="#">Leer más</a>
+            </div>
+            <div class="imgBox">
+                <img class="starbucks" src="/images/img1.png" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="/images/thumb1.png" alt="" onClick="imgSlider('img1.png')"></li>
+            <li><img src="/images/thumb2.png" alt="" onClick="imgSlider('img2.png')"></li>
+            <li><img src="/images/thumb3.png" alt="" onClick="imgSlider('img3.png')"></li>
+        </ul>
+        <ul class="contact">
+            <li> <a><img src="/images/facebook.png" alt=""></a></li>
+            <li> <a><img src="/images/instagram.png" alt=""></a></li>
+            <li> <a><img src="/images/twitter.png" alt=""></a></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        function imgSlider(image){  
+            document.querySelector('.starbucks').src = '/images/'+image;
+            switch(image){
+                case 'img1.png':
+                    changeCircleColor('#017143');
+                    break;
+                case 'img2.png':
+                    changeCircleColor('#eb7495');
+                    break;
+                case 'img3.png':
+                    changeCircleColor('#d752b1');
+                    break;
+            }
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menu = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
