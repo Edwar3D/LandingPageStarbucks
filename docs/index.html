@@ -13,14 +13,14 @@
         </div>
         <header>
             <a href="#">
-                <img class="logo" src="/images/logo.png" alt="logo">
+                <img class="logo" src="images/logo.png" alt="logo">
             </a>
             <div class="toggle" onclick="toggleMenu()"></div>
             <ul class="navigation">
                 <li><a href="#">Home</a></li>
-                <li><a href="/menu">Menú</a></li>
-                <li><a href="/news">Noticias</a></li>
-                <li><a href="/contact">Contacto</a></li>
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </header>
 
@@ -31,24 +31,24 @@
                 <a href="#">Leer más</a>
             </div>
             <div class="imgBox">
-                <img class="starbucks" src="/images/img1.png" alt="">
+                <img class="starbucks" src="images/img1.png" alt="">
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="/images/thumb1.png" alt="" onClick="imgSlider('img1.png')"></li>
-            <li><img src="/images/thumb2.png" alt="" onClick="imgSlider('img2.png')"></li>
-            <li><img src="/images/thumb3.png" alt="" onClick="imgSlider('img3.png')"></li>
+            <li><img src="images/thumb1.png" alt="" onClick="imgSlider('img1.png')"></li>
+            <li><img src="images/thumb2.png" alt="" onClick="imgSlider('img2.png')"></li>
+            <li><img src="images/thumb3.png" alt="" onClick="imgSlider('img3.png')"></li>
         </ul>
         <ul class="contact">
-            <li> <a><img src="/images/facebook.png" alt=""></a></li>
-            <li> <a><img src="/images/instagram.png" alt=""></a></li>
-            <li> <a><img src="/images/twitter.png" alt=""></a></li>
+            <li> <a><img src="images/facebook.png" alt=""></a></li>
+            <li> <a><img src="images/instagram.png" alt=""></a></li>
+            <li> <a><img src="images/twitter.png" alt=""></a></li>
         </ul>
     </div>
 
     <script type="text/javascript">
         function imgSlider(image){  
-            document.querySelector('.starbucks').src = '/images/'+image;
+            document.querySelector('.starbucks').src = 'images/'+image;
             switch(image){
                 case 'img1.png':
                     changeCircleColor('#017143');
